@@ -1,0 +1,63 @@
+// ==================================================
+// サイトの基本設定
+// ==================================================
+
+// color ------------------------------------------
+$clr-font: #333;
+$clr-base: #fff;
+$clr-main: #fff20d;
+$clr-accent: #870bf0;
+//使用例 color: $clr-main;
+
+// breakpoint -------------------------------------
+$breakpoints: (
+  pc: "screen and (min-width:840px)",
+  sp: "screen and (max-width:839px)",
+  lg: "screen and (min-width:1280px)",
+  md: "screen and (max-width:1279px) and (min-width: 960px)",
+  sm: "screen and (max-width:959px) and (min-width:600px)",
+  xs: "screen and (max-width: 599px)",
+);
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+//大まかにPCとSPでの表示切替用
+.pc {
+  @include media(pc) {
+    display: inherit !important;
+  }
+  @include media(sp) {
+    display: none !important;
+  }
+}
+.sp {
+  @include media(pc) {
+    display: none !important;
+  }
+  @include media(sp) {
+    display: inherit !important;
+  }
+}
+
+// imgpath ----------------------------------------
+// $imgpath:"../img/";
+//使用例 background: url(#{$imgpath}hoge.jpg);
+
+// clearfix ---------------------------------------
+// @mixin clearfix {
+//   &::after {
+//     content: "";
+//     display: block;
+//     clear: both;
+//   }
+// }
+//使用例 @include clearfix;
+
+// font -------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjp.css");
+$font-base: 'Lato', 'Noto Sans Japanese', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-serif: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+
