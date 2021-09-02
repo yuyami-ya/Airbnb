@@ -83,6 +83,8 @@
 // ヘッダー
 // ==================================================
 .p-header{
+  margin-bottom:-80px;
+  height: 80px;
   &__logo img{
     width: 180px;
     height: auto;
@@ -91,24 +93,69 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid 1px #333;
+    position: relative;
+    height: 80px;
   }
   &__logo{
     display: flex;
     align-items: center;
   }
   &__nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     &__list{
       display: flex;
       align-items: center;
     }
     &__item{
+      position: relative;
+      &:hover{
+      &::after{
+        content: "";
+        display: block;
+        width: 45%;
+        height: 3px;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
       a{
         padding: 8px;
       }
     }
+    &__head{
+      height: 80px;
+      display: flex;
+      align-items: center;
+      a{color: #ffffff;}
+    }
+    &__body{
+      height:80px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 24px;
+    }
+    &__search{
+      padding: 0 40px;
+      background-color: #ffffff;
+      &__list{
+        display: flex;
+        align-items: ceneter;
+      }
+    }
   }
   &__action{
+    a{color: #ffffff;}
     &__list{
       display: flex;
       align-items: center;
