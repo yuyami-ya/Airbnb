@@ -1,4 +1,167 @@
 @charset "UTF-8";
-@import "reset";
-@import "base";
-@import "vendor-prefix";
+@import "base/reset";
+@import "base/base";
+@import "mixin/vendor-prefix";
+
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.c-text{
+  &__lv1{
+    font-size: 56px;
+    font-weight:700;
+  }
+  &__lv2{
+    font-size: 48px;
+    font-weight:700;
+  }
+  &__lv3{
+    font-size: 24px;
+    font-weight:700;
+  }
+  &__lv4{
+    font-size: 16px;
+    font-weight:700;
+  }
+}
+.c-desc{
+  &__lv1{
+    font-size: 28px;
+    font-weight: 400;
+  }
+  &__lv2{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  &__lv3{
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+// ボタンパーツ
+.c-button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: #333;
+  height: 40px;
+  font-size: 16px;
+  border-radius:3px;
+  padding: 0 8px;
+}
+// 比率が変わらない画像のパーツ
+.c-image{
+  background-color: blue;
+  width: 100%;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top:100%;
+  }
+}
+
+// ==================================================
+// ヘッダー
+// ==================================================
+.p-header{
+  &__logo img{
+    width: 180px;
+    height: auto;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #333;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+  }
+  &__nav{
+    &__list{
+      display: flex;
+      align-items: center;  
+    }
+  }
+  &__action{
+    &__list{
+      display: flex;
+      align-items: center;  
+    }
+  }
+}
+// ==================================================
+// メイン
+// ==================================================
+.p-home{
+  &__mainVisual{
+    height: 600px;
+    background-color: #777777;
+  }
+  &__section{
+    margin:64px 0 0;
+    &__head{
+      margin-bottom:8px;
+    }
+    &__body{
+
+    }
+  }
+}
+
+.p-areaList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px;
+  &__item{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 8px;
+    &__image{
+      width: 60px;
+      margin: 0 8px 0 0;
+    }
+  }
+}
+
+.p-cardList{
+  display: flex;
+  margin: -8px;
+  &__item{
+    flex:1 1 0%;
+    padding: 8px;
+  }
+}
+
+// ==================================================
+// フッター
+// ==================================================
+.p-footer{
+  background-color: #F7F7F7;
+  padding: 40px 0 0;
+  &__body{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  &__item{
+    width: 25%;
+    &__head{
+    }
+    &__body{
+
+    }
+  }
+  &__foot{
+    // margin-top: 8px;
+    padding: 8px 0;
+    border-top: 2px solid #333;
+  }
+}
