@@ -19,7 +19,7 @@
     font-weight:700;
   }
   &__lv3{
-    font-size: 24px;
+    font-size: 18px;
     font-weight:700;
   }
   &__lv4{
@@ -50,12 +50,20 @@
   background: #333333;
   height: 40px;
   font-size: 16px;
-  border-radius:3px;
-  padding: 0 8px;
+  border-radius:16px;
+  padding: 0 32px;
+  font-weight: 700;
   &--white{
     color: #333333;
     background-color: #ffffff;
   }
+  // &--gradient{
+  //   color: #6F019C;//非対応のブラウザでの文字色を設定
+  //   background: -webkit-linear-gradient(#6F019C, #C6017E);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  // }
+
 }
 // 比率が変わらない画像のパーツ
 .c-image{
@@ -92,13 +100,21 @@
   &__nav{
     &__list{
       display: flex;
-      align-items: center;  
+      align-items: center;
+    }
+    &__item{
+      a{
+        padding: 8px;
+      }
     }
   }
   &__action{
     &__list{
       display: flex;
-      align-items: center;  
+      align-items: center;
+      a{
+        padding: 8px;
+      }
     }
   }
 }
@@ -106,9 +122,23 @@
 // メイン
 // ==================================================
 .p-home{
+  padding:0 0 40px 0;
   &__mainVisual{
-    height: 600px;
-    background-color: #777777;
+    height: 95vh;
+    background:url(../img/main.jpeg);
+    background-size: cover;
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    &__text{
+      text-align: center;
+      .c-text__lv3{
+        margin-bottom: 32px;
+      }
+    }
   }
   &__section{
     margin:64px 0 0;
@@ -189,9 +219,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    padding: 0 0 16px 0;
   }
   &__item{
     width: 25%;
+    &__list{
+      a{
+        display: inline-flex;
+      }
+    }
     &__head{
     }
     &__body{

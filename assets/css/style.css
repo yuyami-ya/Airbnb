@@ -106,7 +106,7 @@ table {
 }
 
 .c-text__lv3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -147,8 +147,9 @@ table {
   background: #333333;
   height: 40px;
   font-size: 16px;
-  border-radius: 3px;
-  padding: 0 8px;
+  border-radius: 16px;
+  padding: 0 32px;
+  font-weight: 700;
 }
 
 .c-button--white {
@@ -213,6 +214,10 @@ table {
           align-items: center;
 }
 
+.p-header__nav__item a {
+  padding: 8px;
+}
+
 .p-header__action__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -224,9 +229,42 @@ table {
           align-items: center;
 }
 
+.p-header__action__list a {
+  padding: 8px;
+}
+
+.p-home {
+  padding: 0 0 40px 0;
+}
+
 .p-home__mainVisual {
-  height: 600px;
-  background-color: #777777;
+  height: 95vh;
+  background: url(../img/main.jpeg);
+  background-size: cover;
+}
+
+.p-home__mainVisual .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.p-home__mainVisual__text {
+  text-align: center;
+}
+
+.p-home__mainVisual__text .c-text__lv3 {
+  margin-bottom: 32px;
 }
 
 .p-home__section {
@@ -347,10 +385,18 @@ table {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  padding: 0 0 16px 0;
 }
 
 .p-footer__item {
   width: 25%;
+}
+
+.p-footer__item__list a {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .p-footer__foot {
