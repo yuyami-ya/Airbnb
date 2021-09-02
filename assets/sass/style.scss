@@ -47,16 +47,22 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background: #333;
+  background: #333333;
   height: 40px;
   font-size: 16px;
   border-radius:3px;
   padding: 0 8px;
+  &--white{
+    color: #333333;
+    background-color: #ffffff;
+  }
 }
 // 比率が変わらない画像のパーツ
 .c-image{
   background-color: blue;
   width: 100%;
+  border-radius: 8px;
+  background-size: cover;
   &:before{
     content: "";
     display: block;
@@ -139,7 +145,40 @@
     padding: 8px;
   }
 }
-
+.p-box{
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  height: 480px;
+  width: 100%;
+  padding: 80px;
+  background-color: #333333;
+  border-radius: 8px;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    width: 700px;
+    height: 100%;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+75,ffffff+100&1+18,0.7+75,0+100 */
+background: -moz-linear-gradient(left,  rgba(0,0,0,1) 18%, rgba(0,0,0,0.7) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 18%,rgba(0,0,0,0.7) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,0,0,1) 18%,rgba(0,0,0,0.7) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 8px 0 0 8px;
+  }
+  &__text{
+    max-width: 450px;
+    z-index: 1;
+    .c-button{
+      margin: 56px 0 0 0;
+    }
+  }
+}
 // ==================================================
 // フッター
 // ==================================================

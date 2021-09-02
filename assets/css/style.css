@@ -144,16 +144,23 @@ table {
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
-  background: #333;
+  background: #333333;
   height: 40px;
   font-size: 16px;
   border-radius: 3px;
   padding: 0 8px;
 }
 
+.c-button--white {
+  color: #333333;
+  background-color: #ffffff;
+}
+
 .c-image {
   background-color: blue;
   width: 100%;
+  border-radius: 8px;
+  background-size: cover;
 }
 
 .c-image:before {
@@ -273,6 +280,54 @@ table {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   padding: 8px;
+}
+
+.p-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  height: 480px;
+  width: 100%;
+  padding: 80px;
+  background-color: #333333;
+  border-radius: 8px;
+  position: relative;
+}
+
+.p-box::before {
+  content: "";
+  display: block;
+  width: 700px;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+75,ffffff+100&1+18,0.7+75,0+100 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, black 18%, rgba(0, 0, 0, 0.7) 75%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, black), color-stop(75%, rgba(0, 0, 0, 0.7)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, black 18%, rgba(0, 0, 0, 0.7) 75%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 8px 0 0 8px;
+}
+
+.p-box__text {
+  max-width: 450px;
+  z-index: 1;
+}
+
+.p-box__text .c-button {
+  margin: 56px 0 0 0;
 }
 
 .p-footer {
