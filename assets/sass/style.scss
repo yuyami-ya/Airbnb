@@ -63,8 +63,25 @@
   //   -webkit-background-clip: text;
   //   -webkit-text-fill-color: transparent;
   // }
-
 }
+// リンクホバー時の下線
+.c-linkUnderLine{
+  position: relative;
+  &:hover{
+  &::after{
+    content: "";
+    display: block;
+    width: 45%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+}
+
 // 比率が変わらない画像のパーツ
 .c-image{
   background-color: blue;
@@ -112,20 +129,20 @@
       align-items: center;
     }
     &__item{
-      position: relative;
-      &:hover{
-      &::after{
-        content: "";
-        display: block;
-        width: 45%;
-        height: 3px;
-        background-color: #ffffff;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
+      // position: relative;
+      // &:hover{
+      //   &::after{
+      //     content: "";
+      //     display: block;
+      //     width: 45%;
+      //     height: 3px;
+      //     background-color: #ffffff;
+      //     position: absolute;
+      //     bottom: 0;
+      //     left: 50%;
+      //     transform: translateX(-50%);
+      //   }
+      
       a{
         padding: 8px;
       }

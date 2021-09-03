@@ -157,6 +157,23 @@ table {
   background-color: #ffffff;
 }
 
+.c-linkUnderLine {
+  position: relative;
+}
+
+.c-linkUnderLine:hover::after {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .c-image {
   background-color: blue;
   width: 100%;
@@ -235,23 +252,6 @@ table {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.p-header__nav__item {
-  position: relative;
-}
-
-.p-header__nav__item:hover::after {
-  content: "";
-  display: block;
-  width: 45%;
-  height: 3px;
-  background-color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .p-header__nav__item a {
